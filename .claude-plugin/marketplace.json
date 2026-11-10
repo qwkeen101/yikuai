@@ -1,0 +1,23 @@
+{
+  "name": "yikuai",
+  "owner": {
+    "name": "yikuai contributors"
+  },
+  "description": "yikuai（一块）：一次只做一块的 Claude Code 开发流程技能包。",
+  "plugins": [
+    {
+      "name": "yikuai",
+      "source": "./",
+      "description": "一次只做一块的开发流程：切块、数据结构先行、效果图先看、有上限的追问、可搁置的待确认、按依赖实现。",
+      "category": "development",
+      "keywords": [
+        "workflow",
+        "design",
+        "data-model",
+        "mockup",
+        "spec",
+        "tickets"
+      ]
+    }
+  ]
+}
