@@ -39,6 +39,7 @@
       ▼  下一块
 
 随时可用：/yikuai:next 看进度、接着做；/yikuai:review-parked 回看待确认
+任何一题都可以回「讲讲」：先由 /yikuai:explain 讲明白，再接着问
 ```
 
 | 步骤 | 技能 | 做什么 | 做完的标志 | 块状态变为 |
@@ -95,8 +96,9 @@ claude --plugin-dir ~/src/yikuai
 | `build` | 按依赖顺序实现任务，先写测试，做完一个提交一个 | 用户 |
 | `next` | 几行说明在哪一块哪一步、下一步运行什么、有几条待确认 | 用户或自动 |
 | `review-parked` | 回看待确认清单，一次最多 5 条，改了答案就指出影响 | 用户 |
+| `explain` | 把没看懂的题、术语或方案用大白话讲明白，只讲做这个决定要懂的，讲过的记下来不重讲 | 用户或自动 |
 
-「自动」指 Claude 会在合适的时候自己调用，例如说「接着做」时由 `next` 接上 `schema`、`mock` 或 `ask`；「用户」指只有你输入命令才会运行。
+「自动」指 Claude 会在合适的时候自己调用，例如说「接着做」时由 `next` 接上 `schema`、`mock` 或 `ask`，回「讲讲」时由 `explain` 接上；「用户」指只有你输入命令才会运行。
 
 ## 在项目里生成的文件
 
@@ -104,6 +106,7 @@ claude --plugin-dir ~/src/yikuai
 docs/flow/
   blocks.md                 块清单：编号、名称、范围、依赖、界面、状态、当前步骤
   parked.md                 待确认清单
+  learned.md                讲解记录
   <NN-slug>/
     data.md                 数据结构
     decisions.md            未决问题和已定决定
@@ -118,7 +121,7 @@ docs/adr/NNNN-*.md          架构决定记录
 
 ## 致谢
 
-流程思路受 [mattpocock/skills](https://github.com/mattpocock/skills) 启发（MIT 许可）。
+流程思路受 [mattpocock/skills](https://github.com/mattpocock/skills) 启发（MIT 许可）；讲解步骤（`explain`）的思路参考了其中的 teach 技能。
 
 ## 许可
 

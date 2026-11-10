@@ -1,7 +1,7 @@
 {
   "name": "yikuai",
   "displayName": "yikuai 一块",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "一次只做一块的开发流程：切块、数据结构先行、效果图先看、有上限的追问、可搁置的待确认、按依赖实现。结论都落在仓库文件里，随时能停、换会话接着做。",
   "author": {
     "name": "yikuai contributors"
